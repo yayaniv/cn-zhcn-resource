@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>mk体育 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f8f6;
+            color: #1d1d1b;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 0 60px 0;
+        }
+
+        /* —— hero 横幅 —— */
+        .hero {
+            background: #ffffff;
+            border-bottom: 1px solid #e4e2dd;
+            margin: 0 -20px;
+            padding: 40px 20px 48px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #b7a99a;
+            margin: 28px auto 0;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1a1a18;
+        }
+
+        .hero .subhead {
+            margin-top: 16px;
+            font-size: 1.05rem;
+            color: #5f5d58;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* —— 正文区域 —— */
+        .content-section {
+            margin-top: 44px;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #2b2a28;
+        }
+
+        .content-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .lead {
+            font-size: 1.08rem;
+            border-left: 3px solid #cfc6ba;
+            padding-left: 20px;
+            color: #3b3a36;
+            font-weight: 420;
+        }
+
+        .intro-block {
+            background: #ffffff;
+            padding: 28px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin: 28px 0 32px 0;
+            border: 1px solid #eae7e2;
+        }
+
+        .intro-block p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.74rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8c857b;
+            border-bottom: 1px solid #d6d0c8;
+            padding-bottom: 4px;
+            margin-bottom: 16px;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 16px 0;
+        }
+
+        .highlight-list li {
+            padding: 6px 0 6px 22px;
+            position: relative;
+            color: #2c2b29;
+        }
+
+        .highlight-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #b2a494;
+        }
+
+        .faq-note {
+            background: #f4f2ee;
+            padding: 20px 24px;
+            border-radius: 6px;
+            margin: 32px 0 20px 0;
+            font-size: 0.96rem;
+            border-left: 4px solid #b4a89b;
+        }
+
+        .faq-note strong {
+            font-weight: 500;
+            color: #1d1d1b;
+        }
+
+        .visit-hint {
+            margin-top: 48px;
+            padding: 20px 0 0 0;
+            border-top: 1px solid #ddd8d1;
+            text-align: center;
+            font-size: 1rem;
+            color: #3d3b37;
+        }
+
+        .visit-hint a {
+            color: #1d1d1b;
+            text-decoration: none;
+            border-bottom: 1px solid #b7aa9c;
+            transition: border 0.2s, color 0.2s;
+            font-weight: 450;
+        }
+
+        .visit-hint a:hover {
+            border-bottom-color: #1d1d1b;
+            color: #000000;
+        }
+
+        .footnote {
+            font-size: 0.8rem;
+            color: #8a8780;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .footnote a {
+            color: #8a8780;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* —— 响应式 —— */
+        @media (max-width: 540px) {
+            .hero {
+                margin: 0 -20px;
+                padding: 32px 20px 38px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero .subhead {
+                font-size: 0.96rem;
+            }
+
+            .intro-block {
+                padding: 20px 18px;
+            }
+
+            .content-section p {
+                font-size: 0.96rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+                padding-left: 15px;
+            }
+
+            .faq-note {
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- hero 横幅 -->
+        <header class="hero">
+            <h1>mk体育 · 简明指南</h1>
+            <p class="subhead">日常中保持一份清晰的方向，比快速到达更重要。</p>
+        </header>
+
+        <!-- 正文：三段自然介绍 + 提示 -->
+        <div class="content-section">
+            <p class="lead">
+                说起体育信息，每个人都有自己的习惯。有人喜欢打开手机刷实时，有人更愿意在安静时慢慢翻看。而真正值得依赖的，往往是那些既稳定又容易理解的平台。
+            </p>
+
+            <!-- 第一段：背景说明 -->
+            <div class="intro-block">
+                <span class="section-label">背景 · 为什么需要一份指南</span>
+                <p>
+                    网络上的体育站点很多，但风格、更新频率、信息准确度参差不齐。对于经常浏览体育资讯的朋友来说，找到一个界面干净、内容可靠、不折腾的地方，其实比想象中更花时间。mk体育 正是在这个背景下被越来越多人提及——它不追求花哨，而是把重点放在内容的呈现和访问的顺畅上。
+                </p>
+                <p>
+                    无论是足球联赛、篮球季后赛，还是日常的运动生活话题，一个清晰的信息入口能节省不少精力。这也是为什么很多人会把 <a href="https://cn-zhcn-mksport.com">mk体育</a> 收藏起来，作为日常参考的起点。
+                </p>
+            </div>
+
+            <!-- 第二段：从不同角度展开 -->
+            <p>
+                如果你平时比较忙，可能更希望在几分钟内了解主要赛果和近期看点，而不是被各种弹窗和复杂导航消耗耐心。mk体育 的页面结构偏向简洁，没有过多干扰，能让你快速定位到自己关心的内容。对于不常上网的长辈或刚接触体育信息的朋友来说，这样的设计也更容易适应。
+            </p>
+
+            <ul class="highlight-list">
+                <li>信息分类直观，不需要反复查找</li>
+                <li>页面加载速度稳定，减少等待</li>
+                <li>适合日常浏览，也适合专注阅读</li>
+            </ul>
+
+            <!-- 第三段：进一步说明 + 访问提醒 -->
+            <p>
+                当然，任何网站都有自己的使用场景。mk体育 更适合作为固定访问的参考站点之一，而不是唯一的来源。建议在需要了解体育动态时，将其作为一个方便的入口，同时结合其他可信渠道进行交叉确认。这种习惯能帮你获得更全面的视角，也避免过度依赖单一平台。
+            </p>
+
+            <!-- FAQ 摘要风格提示 -->
+            <div class="faq-note">
+                <strong>访问提示 · 常见问题摘要</strong><br>
+                • 建议使用主流浏览器访问，部分老旧浏览器可能出现排版偏移。<br>
+                • 如果在移动端遇到加载异常，可以尝试刷新页面或检查网络连接。<br>
+                • mk体育 没有强制弹窗或自动跳转，如遇到异常请留意浏览器安全提示。<br>
+                • 页面内容仅供参考，不构成任何专业建议或决策依据。
+            </div>
+
+            <!-- 自然的页尾访问提示 -->
+            <div class="visit-hint">
+                <p>如果需要了解最新的体育动态，可以前往 <a href="https://cn-zhcn-mksport.com">mk体育</a> 浏览。保持轻松的心态，找到适合自己的节奏。</p>
+            </div>
+
+            <div class="footnote">
+                <span>mk体育 · 简明指南与访问提醒</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
